@@ -1,0 +1,375 @@
+/* link the font usd in this project */
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+
+    --Font-size-paragraph: 18px;
+
+    --Mobile: 375px;
+    --Desktop: 1200px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: Epilogue;
+}
+
+
+/* HEADER STAFF */
+#close-btn {
+    display: none;
+    width: 20px;
+}
+
+#hamburger-btn {
+    display: none;
+    /* width: 30px; */
+}
+
+.off {
+    display: none;
+}
+
+.on {
+    display: flex;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em;
+    padding: 3em 0;
+
+    max-width: var(--Desktop);
+    margin: 0 auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    flex: 1;
+}
+
+nav .dropdown-links {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--Medium-Gray);
+    font-size: .9em;
+}
+
+nav a:hover {
+    color: var(--Almost-Black);
+}
+
+.sub-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#sub-menu-1 {
+    flex-direction: column;
+
+    padding: 15px;
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    position: absolute;
+    margin-top: 30px;
+}
+
+#sub-menu-2 {
+    flex-direction: column;
+
+    padding: 15px;
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    position: absolute;
+    margin-top: 30px;
+
+}
+
+.sub-menu-1 img {
+    margin-right: 5px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1.5em;
+}
+
+.header-buttons button:first-child {
+    border: none;
+    background: none;
+    padding: 0;
+
+    color: var(--Medium-Gray);
+    font-weight: 600;
+}
+
+.header-buttons button:last-child {
+    border: 2px solid var(--Medium-Gray);
+    padding: 10px 15px;
+    background: none;
+    border-radius: 10px;
+
+    color: var(--Medium-Gray);
+    font-weight: 600;
+}
+
+.header-buttons button:first-child:hover {
+    color: var(--Almost-Black);
+    cursor: pointer;
+}
+
+.header-buttons button:last-child:hover {
+    color: var(--Almost-Black);
+    cursor: pointer;
+    border-color: var(--Almost-Black);
+}
+
+/* HERO SECTION STAFF */
+
+.hero-container {
+    max-width: 1000px;
+    margin: 0 auto 100px auto;
+
+    display: grid;
+    gap: 5em;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    gap: 3em;
+}
+
+.text-content h1 {
+    font-size: 4.2em;
+    color: var(--Almost-Black);
+}
+
+
+.text-content p {
+    font-size: 1em;
+    color: var(--Medium-Gray);
+    line-height: 1.5em;
+    font-weight: 600;
+}
+
+.text-content button {
+    border: 2px solid var(--Almost-Black);
+    background-color: var(--Almost-Black);
+    color: var(--Almost-White);
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.text-content button:hover {
+    background: none;
+    cursor: pointer;
+    color: var(--Almost-Black);
+}
+
+.our-partners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+
+
+
+
+/* MEDIA QUERRIES */
+
+@media (max-width: 765px) {
+
+    #close-btn {
+        display: block;
+    }
+
+    .close-btn {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    #hamburger-btn {
+        display: block;
+    }
+
+
+    header {
+        padding-top: 2em;
+        padding-inline: 2em;
+    }
+
+    header nav {
+
+        flex-direction: column;
+
+        justify-content: start;
+        align-items: start;
+        background-color: rgb(218, 218, 218);
+
+        gap: 4em;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        padding: 2em 2em;
+    }
+
+    header nav::after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.804);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2em;
+    }
+
+    nav a {
+        /* adjust the fontsize of the links */
+        font-size: 1em;
+    }
+
+    #sub-menu-1 {
+        position: static;
+        padding: 0 15px;
+        box-shadow: none;
+        display: none;
+        margin-top: 0;
+    }
+
+    #sub-menu-2 {
+        position: static;
+        padding: 0 15px;
+        box-shadow: none;
+        display: none;
+        margin-top: 0;
+    }
+
+    #sub-menu-1 img {
+        margin-right: 10px;
+    }
+
+    .header-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 100%;
+    }
+
+
+    /* HERO SECTIONS */
+
+    .hero-container {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 5em;
+    }
+
+    .content-container {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between; */
+
+        text-align: center;
+        gap: 2em;
+    }
+
+    .text-content {
+        gap: 2em;
+    }
+
+    .text-content h1 {
+        font-size: 2.5em;
+    }
+
+    .text-content p {
+        font-size: .9em;
+        padding-inline: 1em;
+    }
+
+    .our-partners {
+        padding: 0 1em;
+        display: flex
+    }
+
+    .our-partners img {
+        max-width: 200px;
+    }
+
+    .img-container img {
+        display: none;
+    }
+
+    .img-container {
+        height: 60vh;
+        width: 100%;
+        background-image: url(image-hero-mobile.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}
